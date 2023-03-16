@@ -1,11 +1,14 @@
 # Terraform_G7
 Terraform project repo.
-Ticket#: Repository_for_Terraform_Project
+Ticket#: 
 
-Description
+Repository_for_Terraform_Project
+
+Description:
+
 This is Groups 7's (Perfect Group) class project.
 
-Task
+Task:
 
 ->Create ReadME File
 
