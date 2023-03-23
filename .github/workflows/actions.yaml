@@ -2,9 +2,13 @@ name: shell commands
 on: 
   - push
 
-env: 
-  aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+# env: 
+#   aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#   aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+env:
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
 jobs:
   terraform_workflow:
@@ -22,9 +26,9 @@ jobs:
         run: terraform validate
       - name: Terraform plan
         run: terraform plan
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        # env:
+        #   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        #   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
 
 
