@@ -32,10 +32,11 @@ jobs:
         uses: actions/checkout@v2
       - name: Terraform Init
         uses: hashicorp/terraform-github-actions@v0.5.1
-        with:
-          tf_actions_version: 0.14.7
-          working_dir: .
-          subcommand: init
+        run: terraform init
+        # with:
+        #   tf_actions_version: 0.14.7
+        #   working_dir: .
+        #   subcommand: init
 
       - name: Terraform validate
         uses: hashicorp/terraform-github-actions@v0.5.1
