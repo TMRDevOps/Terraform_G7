@@ -25,11 +25,11 @@ jobs:
           aws-region: us-east-1
   
 
-  create-s3-bucket:
-    name: Create S3 Bucket
-    needs: terraform-setup
-    runs-on: ubuntu-latest
-    steps:
+  # create-s3-bucket:
+  #   name: Create S3 Bucket
+  #   needs: terraform-setup
+  #   runs-on: ubuntu-latest
+  #   steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
